@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    // paddingTop: 50,
     marginTop: 50,
+    // paddingTop: 50,
     marginBottom: 180,
   },
 });
