@@ -6,8 +6,64 @@ import {
   View,
   StatusBar,
 } from "react-native";
+{
+  /* <View style={styles.card}>
+          <Image style={styles.image} source={require("./assets/image1.png")} />
+          <Text style={styles.text}>Lego Star Wars Terrifying Tal</Text>
+        </View>
+        <View style={styles.card}>
+          <Image style={styles.image} source={require("./assets/image2.png")} />
+          <Text style={styles.text}>Lego Star Wars Terrifying Tal</Text>
+        </View>
+        <View style={styles.card}>
+          <Image style={styles.image} source={require("./assets/image3.png")} />
+          <Text style={styles.text}>Lego Star Wars Terrifying Tal </Text>
+        </View>
+        <View style={styles.card}>
+          <Image style={styles.image} source={require("./assets/image4.png")} />
+          <Text style={styles.text}>Lego Star Wars Terrifying Tal </Text>
+        </View>
+        <View style={styles.card}>
+          <Image style={styles.image} source={require("./assets/image5.jpg")} />
 
+          <Text style={styles.text}>Lego Star Wars Terrifying Tal </Text>
+        </View> */
+}
 export default function App() {
+  const images = {
+    image1: require("./assets/image1.png"),
+    image2: require("./assets/image2.png"),
+    image3: require("./assets/image3.png"),
+    image4: require("./assets/image4.png"),
+    image5: require("./assets/image5.jpg"),
+  };
+  const users = [
+    {
+      id: 1,
+      text: "Lego Star Wars Terrifying Tal",
+      image: "image1",
+    },
+    {
+      id: 2,
+      text: "Lego Star Wars Terrifying Tal",
+      image: "image2",
+    },
+    {
+      id: 3,
+      text: "Lego Star Wars Terrifying Tal",
+      image: "image3",
+    },
+    {
+      id: 4,
+      text: "Lego Star Wars Terrifying Tal",
+      image: "image4",
+    },
+    {
+      id: 5,
+      name: "Lego Star Wars Terrifying Tal",
+      image: "image5",
+    },
+  ];
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="lightblue" barStyle="light-content" />
@@ -53,27 +109,12 @@ export default function App() {
             resizeMode: "contain",
           }}
         />
-        <View style={styles.card}>
-          <Image style={styles.image} source={require("./assets/image1.png")} />
-          <Text style={styles.text}>Lego Star Wars Terrifying Tal</Text>
-        </View>
-        <View style={styles.card}>
-          <Image style={styles.image} source={require("./assets/image2.png")} />
-          <Text style={styles.text}>Lego Star Wars Terrifying Tal</Text>
-        </View>
-        <View style={styles.card}>
-          <Image style={styles.image} source={require("./assets/image3.png")} />
-          <Text style={styles.text}>Lego Star Wars Terrifying Tal </Text>
-        </View>
-        <View style={styles.card}>
-          <Image style={styles.image} source={require("./assets/image4.png")} />
-          <Text style={styles.text}>Lego Star Wars Terrifying Tal </Text>
-        </View>
-        <View style={styles.card}>
-          <Image style={styles.image} source={require("./assets/image5.jpg")} />
-
-          <Text style={styles.text}>Lego Star Wars Terrifying Tal </Text>
-        </View>
+        {users.map((user) => (
+          <View style={styles.card} key={user.id}>
+            <Image source={images[user.image]} style={styles.image} />
+            <Text style={styles.text}>{user.text}</Text>
+          </View>
+        ))}
       </ScrollView>
     </View>
   );
