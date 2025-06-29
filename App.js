@@ -1,10 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+} from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="black" barStyle="light-content" />
+      <StatusBar backgroundColor="lightblue" barStyle="light-content" />
       <Image
         source={require("./assets/logo.png")}
         style={{ TextAlign: "center" }}
@@ -79,9 +85,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#87CEFA",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 50,
-    // paddingTop: 50,
-    marginBottom: 180,
+    paddingTop: 20,
+    // marginBottom: 180,
+    paddingBottom: 250,
   },
   card: {
     backgroundColor: "white",
