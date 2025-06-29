@@ -1,3 +1,3 @@
 # React-Native-ITI
 This repo contains React-Native tasks at ITI
-[Watch day1 Demo Video](Demos/Demo.mp4)
+Demo : https://raw.githubusercontent.com/Mostafa219/React-Native-ITI/main/Demos/Demo.mp4
